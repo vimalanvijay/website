@@ -1,0 +1,409 @@
+*{
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;  
+    font-family: 'Raleway', sans-serif;
+
+}
+html{
+    scroll-behavior: smooth;
+}
+
+/* NavBar */
+nav{
+    display: flex;
+    flex:2;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: rgb(27, 20, 20);
+}
+
+.img-logo{
+    width:5vh;
+    height: 5vh;
+    opacity: 0.8;
+    display: flex;
+}
+.img-logo:hover{
+    cursor: pointer;
+}
+
+
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    z-index: 1;
+}
+
+.nav-links li{
+    list-style: none;
+}
+
+.nav-links a{
+    color:rgb(238, 231, 231);
+    letter-spacing:3px;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bolder;
+    padding:10px;
+   
+}
+
+
+.nav-links a:hover{
+    color:black;
+    background-color: rgb(245, 236, 236);
+    animation: navilinks 0.5s 1 ;
+    border-radius: 5%;
+}
+
+@keyframes navilinks{
+    from{
+        background-color: rgba(0, 0, 0, 0);
+    }
+    to{
+        color:black;
+        background-color: rgb(245, 236, 236);
+    }
+}
+
+.burger{
+    display: none;
+}
+.burger div{
+    width: 25px;
+    height: 2px;
+    background-color: rgb(238, 231, 231);
+    margin: 5px;
+    transition: all 0.25s ease;
+
+}
+.back-img{
+    background-image: url(media/back.webp);
+    height: 200vh;
+    filter: brightness(65%);
+}
+
+.order-page{
+    position: absolute;
+    top:10vh;
+    width: 100%;
+}
+
+.card {
+  padding: 30px;
+  background: #ecf0f1;
+  max-width: 50%;
+  z-index: -1;
+  margin: 60px auto;
+  box-shadow: 6px 6px 10px black;
+  border: 3px black solid;
+
+}
+
+.title{
+    font-size: 4vmax;
+    text-align: center;
+    font-family: 'Montserrat',serif;
+}
+
+.search-wrapper{
+    text-align: center;
+}
+
+.search-bar{
+    font: 400 3vmax system-ui;
+}
+
+input{
+    font: 400 3vmax system-ui;
+}
+
+select{
+    font: 400 3vmax system-ui;
+}
+
+.button{
+    font-size: 3vmax;
+    padding:10px;
+    background-color: #E94F64;
+    border: 3px black solid;
+    font-weight: 600;
+}
+
+.map{
+    width:100%;
+    border:1px black solid;
+}
+
+@media (max-height:800px){
+	footer { position: static; }
+	header { padding-top:40px; }
+}
+ 
+ /* Footer */
+
+.footer-distributed{
+	background-color: #2c292f;
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+	padding: 50px 50px 60px 50px;
+	margin-top: 0px;
+}
+ 
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+	display: inline-block;
+	vertical-align: top;
+}
+ 
+/* Footer left */
+ 
+.footer-distributed .footer-left{
+	width: 30%;
+}
+ 
+.footer-distributed h3{
+	color:  #ffffff;
+	font: normal 36px 'Montserrat', 'san-serif';
+	margin: 0;
+}
+ 
+/* The company logo */
+ 
+.footer-distributed .footer-left img{
+    width: 15%;
+    margin-left:12.5%;
+}
+ 
+.footer-distributed h3 span{
+	color:  #e0ac1c;
+}
+ 
+/* Footer links */
+ 
+.footer-distributed .footer-links{
+	color:  #ffffff;
+	margin: 20px 0 12px;
+}
+ 
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
+}
+ 
+.footer-distributed .footer-company-name{
+	color:  #8f9296;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+ 
+/* Footer Center */
+ 
+.footer-distributed .footer-center{
+	width: 35%;
+}
+ 
+ 
+.footer-distributed .footer-center i{
+	background-color:  #33383b;
+	color: #ffffff;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+ 
+.footer-distributed .footer-center i.fa-envelope{
+	font-size: 17px;
+	line-height: 38px;
+}
+ 
+.footer-distributed .footer-center p{
+	display: inline-block;
+	color: #ffffff;
+	vertical-align: middle;
+	margin:0;
+}
+ 
+.footer-distributed .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+	line-height:2;
+}
+ 
+.footer-distributed .footer-center p a{
+	color:  #e0ac1c;
+	text-decoration: none;;
+}
+ 
+ 
+/* Footer Right */
+ 
+.footer-distributed .footer-right{
+	width: 30%;
+}
+ 
+.footer-distributed .footer-company-about{
+	line-height: 20px;
+	color:  #92999f;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0;
+}
+ 
+.footer-distributed .footer-company-about span{
+	display: block;
+	color:  #ffffff;
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+ 
+.footer-distributed .footer-icons{
+	margin-top: 25px;
+}
+ 
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #33383b;
+	border-radius: 2px;
+ 
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+ 
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+ 
+
+
+/*mobile size*/
+
+@media screen and (max-width:480px){
+    body{
+        overflow-x: hidden;
+    }
+
+    .img-logo{
+        width:5.5vh;
+        height: 5.5vh;
+        opacity: 0.8;
+        display: flex;
+
+    }
+
+    .nav-links{
+       position: absolute;
+       right: 0px;
+       height: 92vh;
+       top: 8vh;
+       background-color:  rgb(27, 20, 20);
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       width:50%;
+       transform: translateX(100%);
+       transition: transform 0.5s ease-in;
+    }
+
+    .nav-links li{
+        opacity: 0;
+    }
+    .burger{
+        display: block;
+        cursor: pointer;
+    }
+
+    .back-img{
+        height:135vmax;
+    }
+
+    .card{
+        max-width:100%;
+        margin:40px 10px;
+        padding:15px;
+    }
+    .title{
+        font-size: 5.5vmax;
+    }
+
+    .search-bar{
+        border: 1px black solid;
+    }
+
+    .map{
+        border: 1px black solid;
+    }
+
+    
+
+    .footer-distributed{
+        margin-top: 0px;
+    }
+
+    .footer-distributed .footer-left img{
+        width: 15%;
+        margin-left:0%;
+    }
+    .footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+ 
+	.footer-distributed .footer-center i{
+		margin-left: 0;
+	}
+}
+
+/* NavBar animation */
+
+.nav-active{
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px,5px);
+
+}
+.toggle .line2{
+    opacity: 0;
+}
+
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px,-5px);
+}
+

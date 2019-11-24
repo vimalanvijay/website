@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Magic Map | Add Map</title>
+  <link rel="stylesheet" href="css/stylesheet.css" type="text/css">
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Google API--->
+  <link href="https://fonts.googleapis.com/css?family=B612|Raleway|Roboto+Condensed:700|Roboto:500" rel="stylesheet">
+
+  <!-- Updates the map image-->
+  <script>
+
+    var url_start = "https://maps.googleapis.com/maps/api/staticmap?center=";
+    var location_in;
+    var zoom_in;
+    var road_colour_in;
+    var key = "AIzaSyA3aYU6UKfZkp8QfafB2WCfouPjxVrFx2A";
+    var url;
+    $(document).ready(function(){
+      $("button").click(function(){
+        location_in = $("#LocationForm").val();
+        zoom_in = $("#ZoomForm").val();
+        roadcolour_in = $("#RoadColourForm").val();
+        url = url_start.concat(location_in, "&zoom=", zoom_in, "&size=700x515&style=feature:road|color:0x", roadcolour_in, "&key=", key)
+        $("#mapurl").html(url);
+          $("#map").attr("src",url);
+      });
+    });
+  </script>
+
+</head>
+
+<body>
+  <!-- Navigation from bootstrap-->
+  <ul>
+    <li><img src="media/logo.png" class="logo"></li>
+    <li><a href="#home">Home</a></li>
+    <li><a class="active">Add Map</a></li>
+    <li style="float:right"><a href="#Our Team">Our Team</a></li>
+    <li style="float:right"><a href="#Cart">About</a></li>
+  </ul>
+
+  <!-- Page Content -->
+<br>
+<br>
+<br>
+  <!-- Enter location-->
+  <h1 class="title">Enter Location</h1>
+  <br>
+    <div class="form-group">
+    <input id="LocationForm" alt="search bar" class="form-control" type="text" placeholder="Search" aria-label="Search" required>
+    <i class="form-control" aria-hidden="true"></i>
+    </div>
+  </br>
+
+  <!-- Choose Scale-->
+  <h1 class="title">Select Scale</h1>
+  <br>
+  <div class="form-group">
+      <select class="form-control" id=ZoomForm>
+        <option value="17" >Campus Map</option>
+        <option value="15" >City</option>
+        <option value="14" >Sub urban</option>
+        <option value="12" >Country side</option>
+      </select id="ZoomForm">
+    </div>
+  <br>
+
+  <!-- Search-->
+  <p align="center">
+    <button id="mapsubmit" type="submit" class="button">Find Map</button>
+  </p>
+  <br>
+
+  <!-- Map display-->
+  <p align="center">
+    <img id="map" alt="image of your map" src="https://maps.googleapis.com/maps/api/staticmap?center=SW72AZ&zoom=14&size=700x515&key=AIzaSyA3aYU6UKfZkp8QfafB2WCfouPjxVrFx2A" alt="preview of the map">
+  </p>
+  <hr>
+
+  <!-- last buttons-->
+<p align="center">
+    <button class="button"> Add Map </button>
+    <button class="button">Check Out</button>
+</p>
+</body>
+
+<!--footer-->
+<footer class="footer">
+  <div class="row">
+    <div class="column">
+      <h2> Copyright</h2>
+      <p>we are ......</p>
+    </div>
+    <div class="row">
+      <h2> Social Media</h2>
+      <p>.......</p>
+    </div>
+  </div>
+</footer>
+
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+
+    <!-- animate on scroll js -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <title>Magic Map - Feeling is believing</title>
+
+    <meta name='viewport' content='width=device-width, initial-scale=1, minimum-scale=1'>
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+    <link rel='stylesheet' type='text/css' media='screen' href='order.css'>
+
+    <!-- font pack -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- icon pack -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+
+    <!-- animate on scroll -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Google API -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Updates the map image-->
+     <script>
+
+        var url_start = "https://maps.googleapis.com/maps/api/staticmap?center=";
+        var location_in;
+        var zoom_in;
+        var road_colour_in;
+        var key = "AIzaSyA3aYU6UKfZkp8QfafB2WCfouPjxVrFx2A";
+        var url;
+        $(document).ready(function(){
+        $("button").click(function(){
+            location_in = $("#LocationForm").val();
+            zoom_in = $("#ZoomForm").val();
+            roadcolour_in = $("#RoadColourForm").val();
+            url = url_start.concat(location_in, "&zoom=", zoom_in, "&size=700x515&style=feature:road|color:0x", roadcolour_in, "&key=", key)
+            $("#mapurl").html(url);
+            $("#map").attr("src",url);
+        });
+        });
+    </script>
+<meta name="theme-color" content="rgb(27, 20, 20)" />
+</head>
+
+<body>
+    <nav>
+        <a class="logo" href="index.html">
+            <img src="media/logo.svg" class="img-logo" >
+        </a>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li> 
+            <li><a href="order.html">Order</a></li> 
+            <li><a href="about.html">About Us</a></li> 
+            <li><a href="contact.html">Contact Us</a></li> 
+        </ul>
+
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+
+        </div>
+        <script src="app.js"> </script>
+    </nav>
+
+    <div class="back-img">
+            
+    </div>
+    <div class="order-page">
+       
+        <!-- enter location card -->
+            <div class="card" data-aos="fade-right" data-aos-duration=1000>
+                    <div class="title">Enter Location</div>
+                    <br>
+                      <div class="search-wrapper">
+                        <input id="LocationForm" alt="search bar" class="search-bar" type="text" placeholder="Search" aria-label="Search" required>
+                        <i class="form-control" aria-hidden="true"></i>
+                      </div>
+            </div>
+                  
+            <!-- choose scale card -->
+            <div class="card" data-aos="fade-right" data-aos-duration=1500>
+                    <div class="title">Select Scale</div>
+                    <br><br>
+                    <div class="search-wrapper">
+                        <select class="search-bar" id=ZoomForm>
+                          <option value="17" >Campus Map</option>
+                          <option value="15" >City</option>
+                          <option value="14" >Sub urban</option>
+                          <option value="12" >Country side</option>
+                        </select id="ZoomForm">
+                    </div>  
+                    <br><br><br>
+
+
+
+                    <div class="search-wrapper">
+                         <button id="mapsubmit" type="submit" class="button">Find Map</button>
+                    </div>
+                     
+            </div>
+        
+            <div class="card"data-aos="fade-right" data-aos-duration=2000>
+                <div class="title">Map Preview</div>
+                <br><br>
+                <p align="center">
+                        <img id="map" class="map" alt="image of your map" src="https://maps.googleapis.com/maps/api/staticmap?center=SW72AZ&zoom=14&size=700x515&key=AIzaSyA3aYU6UKfZkp8QfafB2WCfouPjxVrFx2A" alt="preview of the map">
+                </p>
+                        
+            </div>
+    </div>
+   
+
+    <script src="page.js"></script>
+</body>
+
+
+<footer class="footer-distributed">
+ 
+    <div class="footer-left">
+  <img src="media/logo.svg">
+        <h3>Magic<span>Maps</span></h3>
+
+        <p class="footer-links">
+            <a href="#">Home</a>
+            |
+            <a href="#">Order</a>
+            |
+            <a href="#">About Us</a>
+            |
+            <a href="#">Contact Us</a>
+        </p>
+
+        <p class="footer-company-name">© 2019 Magic Maps </p>
+    </div>
+
+    <div class="footer-center">
+        <div>
+            <i class="fa fa-map-marker"></i>
+              <p><span>Department of Bioengineering,<br>
+                Imperial College London</span>
+                South Kensington, SW7 2AZ
+            </p>
+        </div>
+
+        <div>
+            <i class="fa fa-phone"></i>
+            <p>+44 7490304875</p>
+        </div>
+        <div>
+            <i class="fa fa-envelope"></i>
+            <p><a href="mailto:support@magicmaps.co.uk">support@magicmaps.co.uk</a></p>
+        </div>
+    </div>
+    <div class="footer-right">
+        <p class="footer-company-about">
+            <span>About Us</span>
+            We are a group of students from Imperial College London aimed help the visually impaired explore new areas without the need of a guide. </p>
+        <div class="footer-icons">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+        </div>
+    </div>
+</footer>
+
+</html>
